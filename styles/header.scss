@@ -1,60 +1,72 @@
-.wrapper-header {
+.wrapper-header-home {
   background: $backgroundColor;
-  background-size: cover;
-  background-attachment: fixed;
+}
+.home-header-container {
+  max-width: 1300px;
+  margin: auto auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0px;
   overflow: hidden;
-
-  .home-header-container {
-    max-width: 1300px;
-    margin: auto auto;
+  .div_links {
+    margin: 0;
+    #logo {
+      margin: 15px 35px 19px 0px;
+    }
+    .link-headr {
+      margin: 12px 10px 12px 0px;
+    }
+  }
+  .div_right {
     display: flex;
-    justify-content: center;
-    align-items: center;
     justify-content: space-between;
-    padding: 20px 0px;
+    align-items: center;
+    gap: 84px;
+    text-align: center;
+    margin: 0px;
+  }
 
-    .div_right {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 84px;
-      text-align: center;
-    }
+  ul {
+    list-style-type: $listStyleType;
+    display: flex;
 
-    ul {
-      list-style-type: $listStyleType;
-      display: flex;
-
-      li {
-        display: inline-block;
-        margin-right: 30px;
-        a {
-          color: $colorWhite;
-          text-decoration: $textВecoration;
-          font-size: 17px;
-          font-family: $fontFamilyInter;
-          line-height: 25.5px;
-          font-weight: $fontWeight;
-          letter-spacing: 0.17px;
-        }
-      }
-    }
-    .btn-header {
-      button {
-        margin-right: 70px;
-        padding: 20px 52px 20px 52px;
-        font-size: $fontSize;
-        font-family: $fontFamilyCardo;
+    li {
+      display: inline-block;
+      margin-right: 30px;
+      a {
+        color: $colorWhite;
+        text-decoration: $textDecoration;
+        font-size: 17px;
+        font-family: $fontFamilyInter;
+        line-height: 25.5px;
         font-weight: $fontWeight;
-        line-height: 28.5px;
-        text-transform: capitalize;
-        color: $color;
-        background: $backgroundBtn;
-        border: 2px solid #ffca42;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        width: 222px;
-        height: 65px;
+        letter-spacing: 0.17px;
       }
     }
   }
+  .btn-header {
+    padding: 20px 52px 20px 52px;
+    font-size: $fontSize;
+    font-family: $fontFamilyCardo;
+    font-weight: $fontWeight;
+    line-height: 28.5px;
+    text-transform: capitalize;
+    color: $color;
+    background: $backgroundBtn;
+    border: 2px solid #ffca42;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 222px;
+    height: 65px;
+  }
+}
+//-------------------------------------------------------------------- Companies
+
+.wrapper-header-companies {
+  background: $backgroundColor;
+}
+
+.companies-header-container {
+  @extend .home-header-container;
 }
