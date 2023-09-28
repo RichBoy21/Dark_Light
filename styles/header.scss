@@ -70,3 +70,23 @@
 .companies-header-container {
   @extend .home-header-container;
 }
+
+//-------------------------------------------------------------------- Author
+
+.wrapper-header-author {
+  background: $backgroundColor;
+}
+
+.author-header-container {
+  @extend .home-header-container;
+}
+
+//-------------------------------------------------------------------- Articles
+
+.wrapper-header-articles {
+  background: $backgroundColor;
+}
+
+.articles-header-container {
+  @extend .home-header-container;
+}

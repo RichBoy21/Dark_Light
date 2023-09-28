@@ -1,6 +1,5 @@
 //  header ----------------------------------------
 
-import { renderHeader } from "./function.js";
+import { createHeader } from "./function.js";
 
-renderHeader();
-console.log(renderHeader());
+createHeader();
