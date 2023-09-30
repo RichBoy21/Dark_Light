@@ -36,6 +36,7 @@
     li {
       display: inline-block;
       margin-right: 30px;
+
       a {
         color: $colorWhite;
         text-decoration: $textDecoration;
@@ -44,6 +45,10 @@
         line-height: 25.5px;
         font-weight: $fontWeight;
         letter-spacing: 0.17px;
+      }
+
+      a:hover {
+        color: #ffca42;
       }
     }
   }

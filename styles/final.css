@@ -48,6 +48,9 @@
   font-weight: 200;
   letter-spacing: 0.17px;
 }
+.home-header-container ul li a:hover, .articles-header-container ul li a:hover, .author-header-container ul li a:hover, .companies-header-container ul li a:hover {
+  color: #ffca42;
+}
 .home-header-container .btn-header, .articles-header-container .btn-header, .author-header-container .btn-header, .companies-header-container .btn-header {
   padding: 20px 52px 20px 52px;
   font-size: 19px;
@@ -224,6 +227,125 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
+}
+
+.main-home {
+  background: #1b3764;
+  padding: 100px 0px 100px 0px;
+}
+.main-home .home-main-container {
+  display: flex;
+  max-width: 1300px;
+  padding: 0px 21px 0px 23px;
+  margin: 0px 70px 0px 70px;
+  gap: 98px;
+}
+.main-home .home-main-container .info-container {
+  margin: 0px;
+  padding: 150px 0px 150px 0px;
+  max-width: 590px;
+}
+.main-home .home-main-container .info-container #dash {
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Cardo, serif;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 1.2px;
+  text-transform: capitalize;
+  margin: 0px 0px 10px 50px;
+  position: relative;
+}
+.main-home .home-main-container .info-container #dash img {
+  position: absolute;
+  top: 18px;
+  left: -50px;
+}
+.main-home .home-main-container .info-container .main-title {
+  margin-bottom: 42px;
+}
+.main-home .home-main-container .info-container .main-title h1 {
+  color: #fff;
+  font-family: Cardo, serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 78px;
+  letter-spacing: 1.3px;
+}
+.main-home .home-main-container .info-container .main-title #best-hone {
+  margin-bottom: 25px;
+}
+.main-home .home-main-container .info-container .main-title p {
+  color: #b4c7e7;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.5px;
+}
+.main-home .home-main-container .info-container .main-button {
+  padding: 10px 0px 10px 0px;
+  display: flex;
+}
+.main-home .home-main-container .info-container .main-button button {
+  margin: 0px;
+  padding: 20px 52px 20px 52px;
+  font-size: 19px;
+  font-family: Cardo, serif;
+  font-weight: 200;
+  line-height: 28.5px;
+  text-transform: capitalize;
+  color: #1b3764;
+  background: #ffca42;
+  border: 2px solid #ffca42;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 222px;
+  height: 65px;
+}
+.main-home .home-main-container .info-container .main-button p {
+  margin-left: 50px;
+  color: #fff;
+  font-family: Cardo, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30.4px;
+  letter-spacing: 0.38px;
+  text-transform: capitalize;
+}
+.main-home .home-main-container .info-container .main-info {
+  display: flex;
+  gap: 60px;
+  padding-top: 40px;
+}
+.main-home .home-main-container .info-container .main-info span {
+  margin: 0px;
+}
+.main-home .home-main-container .info-container .main-info span img {
+  margin-right: 10px;
+}
+.main-home .home-main-container .info-container .main-info span h3 {
+  margin-left: -10px;
+  padding: 0px 0px 10px 10px;
+  color: #fff;
+  font-family: Cardo, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.8px;
+  letter-spacing: 0.48px;
+}
+.main-home .home-main-container .info-container .main-info span p {
+  padding-left: 25px;
+  color: #b4c7e7;
+  font-family: Inter, sans-serif;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
 }
 
 *,
