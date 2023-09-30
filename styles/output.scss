@@ -1,5 +1,7 @@
 @import "variables";
 @import "header";
+@import "footer";
+@import "main";
 
 *,
 html,
@@ -9,4 +11,5 @@ body {
   box-sizing: border-box;
   max-width: 1440px;
   margin: auto auto;
+  // overflow: hidden;
 }

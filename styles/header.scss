@@ -5,11 +5,11 @@
   max-width: 1300px;
   margin: auto auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   justify-content: space-between;
   padding: 20px 0px;
-  overflow: hidden;
   .div_links {
     margin: 0;
     #logo {
@@ -21,6 +21,7 @@
   }
   .div_right {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: 84px;
@@ -31,7 +32,7 @@
   ul {
     list-style-type: $listStyleType;
     display: flex;
-
+    flex-wrap: wrap;
     li {
       display: inline-block;
       margin-right: 30px;
@@ -61,12 +62,12 @@
     height: 65px;
   }
 }
+
 //-------------------------------------------------------------------- Companies
 
 .wrapper-header-companies {
   background: $backgroundColor;
 }
-
 .companies-header-container {
   @extend .home-header-container;
 }
@@ -76,7 +77,6 @@
 .wrapper-header-author {
   background: $backgroundColor;
 }
-
 .author-header-container {
   @extend .home-header-container;
 }
@@ -86,7 +86,6 @@
 .wrapper-header-articles {
   background: $backgroundColor;
 }
-
 .articles-header-container {
   @extend .home-header-container;
 }

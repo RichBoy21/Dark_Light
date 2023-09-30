@@ -1,0 +1,159 @@
+.footer-home {
+  background: $backgroundColor;
+  padding: 60px 70px 75px;
+}
+.wrapper-footer-home {
+  max-width: 1300px;
+}
+.home-footer-container {
+  margin: 30px 0px 60px 0px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.footer-messengers {
+  margin: 0px;
+  width: 277.703px;
+
+  #messengers-logo {
+    left: 0px;
+    bottom: 0px;
+    margin-bottom: 20px;
+  }
+
+  .ul-footer-messengers {
+    list-style: $listStyleType;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+.footer-explore {
+  margin: 0px 0px 0px 30px;
+  width: 277.703px;
+
+  h2 {
+    color: $colorWhite;
+    font-family: $fontFamilyCardo;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33.6px;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    list-style: $listStyleType;
+
+    li {
+      position: relative;
+      color: #b4c7e7;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 400;
+      height: 25px;
+
+      img {
+        position: absolute;
+        top: -8px;
+      }
+      p {
+        margin-left: 40px;
+      }
+    }
+  }
+}
+.footer-utility-pages {
+  margin: 0px 0px 0px 40px;
+  @extend .footer-explore;
+}
+.footer-keep-in-Touch {
+  margin: 0px 0px 30px 20px;
+  width: 277.703px;
+  h2 {
+    color: $colorWhite;
+    font-family: $fontFamilyCardo;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 33.6px;
+    margin-bottom: 30px;
+  }
+  label {
+    display: flex;
+
+    #one-p {
+      margin-left: 28px;
+    }
+    #two-p {
+      margin-left: 51px;
+    }
+    #three-p {
+      margin-left: 41px;
+    }
+  }
+  #one {
+    margin-bottom: 55px;
+  }
+  #two {
+    margin-bottom: 18px;
+  }
+  #three {
+  }
+}
+
+//-------------------------------------------------------------------- Companies
+.footer-companies {
+  background: $backgroundColor;
+  padding: 60px 70px 75px;
+}
+.wrapper-footer-companies {
+  max-width: 1300px;
+}
+.companies-footer-container {
+  margin: 30px 0px 60px 0px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.footer-messengers {
+  @extend .footer-messengers;
+}
+//-------------------------------------------------------------------- Author
+.footer-author {
+  background: $backgroundColor;
+  padding: 60px 70px 75px;
+}
+.wrapper-footer-author {
+  max-width: 1300px;
+}
+.author-footer-container {
+  margin: 30px 0px 60px 0px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.footer-messengers {
+  @extend .footer-messengers;
+}
+//-------------------------------------------------------------------- Articles
+.footer-articles {
+  background: $backgroundColor;
+  padding: 60px 70px 75px;
+}
+.wrapper-footer-articles {
+  max-width: 1300px;
+}
+.articles-footer-container {
+  margin: 30px 0px 60px 0px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.footer-messengers {
+  @extend .footer-messengers;
+}

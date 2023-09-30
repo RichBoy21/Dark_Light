@@ -1,5 +1,11 @@
+import { createHeader, createFooter } from "./function.js";
+
 //  header ----------------------------------------
 
-import { createHeader } from "./function.js";
-
 createHeader();
+
+//  main ------------------------------------------
+
+//  footer ----------------------------------------
+
+createFooter();
