@@ -7,6 +7,7 @@ const container_companies = document.querySelector(
 const container_articles = document.querySelector(".articles-header-container");
 
 //  main ------------------------------------------
+const container_cards = document.querySelector(".card-items");
 //  footer ----------------------------------------
 const container_footer_home = document.querySelector(".home-footer-container");
 const container_footer_articles = document.querySelector(
@@ -31,3 +32,4 @@ export {
   container_footer_companies,
   container_footer_author,
 };
+export { container_cards };

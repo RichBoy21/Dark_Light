@@ -122,3 +122,93 @@
     }
   }
 }
+.author-book-main {
+  .author-main-container {
+    padding-top: 20px;
+    margin: 50px 70px 90px 70px;
+
+    h1 {
+      color: $backgroundColor;
+      text-align: center;
+      margin-bottom: 20px;
+      font-family: $fontFamilyCardo;
+      font-size: 42px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 50.4px;
+      text-transform: capitalize;
+    }
+    .line {
+      margin-bottom: 15px;
+      background-color: #ffca42;
+      width: 50px;
+      height: 3px;
+      border: none;
+    }
+    .card-items {
+      padding: 60px 10px 60px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      .card {
+        margin: 0px;
+        display: flex;
+        width: 630px;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        flex-shrink: 0;
+        .cards-info {
+          h3 {
+            margin: 17px 0px 7px 0px;
+            color: $backgroundColor;
+            font-family: $fontFamilyCardo;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 38.4px;
+            letter-spacing: 0.32px;
+          }
+          #price {
+            color: #ffca42;
+            font-family: Inter;
+            font-size: 21px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 33px;
+            margin-bottom: 17px;
+          }
+          #text {
+            color: #969aa0;
+            font-family: Inter;
+            font-size: 19px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28.5px;
+            margin-bottom: 13px;
+          }
+          #link {
+            display: flex;
+            margin-bottom: 86px;
+            div {
+              width: 16px;
+              height: 16px;
+              border-radius: 100px;
+              background: #ffca42;
+              margin: 5px 0px 0px 0px;
+            }
+            p {
+              color: $backgroundColor;
+              font-family: $fontFamilyCardo;
+              font-size: 24px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 28.8px;
+              margin: 0px 0px 18px 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

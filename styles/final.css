@@ -348,6 +348,92 @@
   line-height: 27px;
 }
 
+.author-book-main .author-main-container {
+  padding-top: 20px;
+  margin: 50px 70px 90px 70px;
+}
+.author-book-main .author-main-container h1 {
+  color: #1b3764;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Cardo, serif;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50.4px;
+  text-transform: capitalize;
+}
+.author-book-main .author-main-container .line {
+  margin-bottom: 15px;
+  background-color: #ffca42;
+  width: 50px;
+  height: 3px;
+  border: none;
+}
+.author-book-main .author-main-container .card-items {
+  padding: 60px 10px 60px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.author-book-main .author-main-container .card-items .card {
+  margin: 0px;
+  display: flex;
+  width: 630px;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-shrink: 0;
+}
+.author-book-main .author-main-container .card-items .card .cards-info h3 {
+  margin: 17px 0px 7px 0px;
+  color: #1b3764;
+  font-family: Cardo, serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 38.4px;
+  letter-spacing: 0.32px;
+}
+.author-book-main .author-main-container .card-items .card .cards-info #price {
+  color: #ffca42;
+  font-family: Inter;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 33px;
+  margin-bottom: 17px;
+}
+.author-book-main .author-main-container .card-items .card .cards-info #text {
+  color: #969aa0;
+  font-family: Inter;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.5px;
+  margin-bottom: 13px;
+}
+.author-book-main .author-main-container .card-items .card .cards-info #link {
+  display: flex;
+  margin-bottom: 86px;
+}
+.author-book-main .author-main-container .card-items .card .cards-info #link div {
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background: #ffca42;
+  margin: 5px 0px 0px 0px;
+}
+.author-book-main .author-main-container .card-items .card .cards-info #link p {
+  color: #1b3764;
+  font-family: Cardo, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.8px;
+  margin: 0px 0px 18px 10px;
+}
+
 *,
 html,
 body {

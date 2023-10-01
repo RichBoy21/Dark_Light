@@ -12,6 +12,8 @@ import {
   container_footer_author,
 } from "./variables.js";
 
+import { cards_main } from "./cards.js";
+import { container_cards } from "./variables.js";
 //  header ----------------------------------------
 function createHeader() {
   const containers = [
@@ -47,6 +49,26 @@ function createHeader() {
 }
 
 //  main ------------------------------------------
+
+function createAuthor() {
+  cards_main.forEach((el) => {
+    const divCard = document.createElement("div");
+    divCard.classList.add("card");
+    divCard.innerHTML = `    <img src="${el.img}" alt="">
+                        <div class="cards-info">
+                                <h3>${el.title}</h3>
+                                <p id="price">${el.price}</p>
+                                <p id="text">${el.text}</p>
+                            <div id="link">
+                                    <div> </div>
+                                    <p>${el.link}</p>
+                            </div>
+                        </div>
+`;
+    container_cards.append(divCard);
+  });
+}
+
 //  footer ----------------------------------------
 
 function createFooter() {
@@ -105,4 +127,4 @@ function createFooter() {
       : (container.innerHTML = footerHTML)
   );
 }
-export { createHeader, createFooter };
+export { createHeader, createFooter, createAuthor };
