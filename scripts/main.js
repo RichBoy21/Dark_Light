@@ -1,11 +1,3 @@
-import { createHeader, createFooter, createAuthor } from "./function.js";
-
-//  header ----------------------------------------
-
-createHeader();
-
-//  main ------------------------------------------
-createAuthor();
-//  footer ----------------------------------------
+import { createFooter } from "./function.js";
 
 createFooter();

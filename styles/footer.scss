@@ -13,16 +13,20 @@
   gap: 30px;
 }
 .footer-messengers {
+  display: flex;
+  gap: 30px;
   margin: 0px;
-  width: 277.703px;
+  position: relative;
 
   #messengers-logo {
-    left: 0px;
-    bottom: 0px;
+    position: absolute;
+    left: 4px;
     margin-bottom: 20px;
   }
 
   .ul-footer-messengers {
+    width: 277.703px;
+    margin: 0px 20px 124px 0px;
     list-style: $listStyleType;
     display: flex;
     flex-wrap: wrap;

@@ -14,5 +14,3 @@ const cards_main = [
     link: "Printed Book",
   },
 ];
-
-export { cards_main };

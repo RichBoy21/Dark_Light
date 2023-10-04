@@ -1,75 +1,11 @@
 import {
-  container_home,
-  container_author,
-  container_companies,
-  container_articles,
-} from "./variables.js";
-
-import {
   container_footer_home,
   container_footer_articles,
   container_footer_companies,
   container_footer_author,
 } from "./variables.js";
 
-import { cards_main } from "./cards.js";
-import { container_cards } from "./variables.js";
-//  header ----------------------------------------
-function createHeader() {
-  const containers = [
-    container_home,
-    container_author,
-    container_companies,
-    container_articles,
-  ];
-
-  for (let i = 0; i < containers.length; i++) {
-    const headerHTML = `
-      <div class="div_links"> 
-        <img src="./images/header/IMAGE.svg" alt="logo" id="logo">
-        <a href="https://www.facebook.com" target="_blank"><img src="./images/header/Frame.svg" alt="facebook" id="facebook"  class="link-headr"></a>
-        <a href="https://www.google.com/search?client=safari&rls=en&q=twitter&ie=UTF-8&oe=UTF-8" target="_blank"><img
-                src="./images/header/fogel.svg" alt="twitter" id="twitter"  class="link-headr"></a>
-        <a href="https://www.google.com/search?client=safari&rls=en&q=instagram&ie=UTF-8&oe=UTF-8" target="_blank"><img
-        src="./images/header/instagram.svg" alt="instagram" id="instagram"  class="link-headr"></a>
-      </div>
-      <div class="div_right"> 
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="author.html">Author</a></li>
-          <li><a href="companies.html">Companies</a></li>
-          <li><a href="articles.html">Articles</a></li>
-        </ul>
-        <button class="btn-header">Order Today</button>
-      </div>`;
-    containers[i] === null
-      ? (containers[i] = `<div> </div>`)
-      : (containers[i].innerHTML = headerHTML);
-  }
-}
-
-//  main ------------------------------------------
-
-function createAuthor() {
-  cards_main.forEach((el) => {
-    const divCard = document.createElement("div");
-    divCard.classList.add("card");
-    divCard.innerHTML = `    <img src="${el.img}" alt="">
-                        <div class="cards-info">
-                                <h3>${el.title}</h3>
-                                <p id="price">${el.price}</p>
-                                <p id="text">${el.text}</p>
-                            <div id="link">
-                                    <div> </div>
-                                    <p>${el.link}</p>
-                            </div>
-                        </div>
-`;
-    container_cards.append(divCard);
-  });
-}
-
-//  footer ----------------------------------------
+const div = document.querySelector("#card-items");
 
 function createFooter() {
   const containers = [
@@ -78,53 +14,216 @@ function createFooter() {
     container_footer_companies,
     container_footer_author,
   ];
+  // Создаем раздел для мессенджеров
+  const messengersDiv = document.createElement("div");
+  messengersDiv.classList.add("footer-messengers");
 
-  const footerHTML = `<div class="footer-messengers">
-                                  <img src="./images/footer/logo.svg" alt="logo" id="messengers-logo">
-                                        <ul class="ul-footer-messengers" >
-                                            <li><a href="https://www.facebook.com" target="_blank"><img src="./images/footer/4.svg" alt="facebook"></a>
-                                            </li>
-                                            <li><a href="https://twitter.com" target="_blank"><img src="./images/footer/Frame.svg" alt="twitter"></a>
-                                            </li>
-                                            <li><a href="https://www.instagram.com" target="_blank"><img src="./images/footer/Frame-2.svg" alt="in"></a>
-                                            </li>
-                                            <li><a href="https://www.instagram.com" target="_blank"><img src="./images/footer/1.svg"
-                                                        alt="instagram"></a></li>
-                                        </ul>
-                            </div>
-                            <div class="footer-explore">
-                                <h2>Explore</h2>
-                                <ul>
-                                    <li><img src="./images/footer/IMAGE.svg" alt="Home"><p>Home</p></li><br>
-                                    <li><img src="./images/footer/IMAGE.svg" alt="About"><p>About</p></li><br>
-                                    <li><img src="./images/footer/IMAGE.svg" alt="Articles"><p>Articles</p></li><br>
-                                    <li><img src="./images/footer/IMAGE.svg" alt="Our Store"><p>Our Store</p></li><br>
-                                    <li><img src="./images/footer/IMAGE.svg" alt="Contact Us"><p>Contact Us</p></li><br>
-                                </ul>
-                            </div>
-                            <div class="footer-utility-pages">
-                                <h2>Utility Pages</h2>
-                                <ul>
-                                    <li><img src="./images/footer/IMAGE.svg" alt="Style Guide"><p>Style Guide</p></li><br>
-                                    <li><img src="./images/footer/IMAGE.svg" alt="404 Not Found"><p>404 Not Found</p></li><br>
-                                    <li><img src="./images/footer/IMAGE.svg" alt="Password Protected"><p>Password Protected</p></li><br>
-                                    <li><img src="./images/footer/IMAGE.svg" alt="Licenses"><p>Licenses</p></li><br>
-                                    <li><img src="./images/footer/IMAGE.svg" alt="Changelog"><p>Changelog</p></li><br>
-                                </ul>
-                            </div>
-                            <div class="footer-keep-in-Touch">
-                                <h2>Keep in Touch</h2>
-                                <div>
-                                    <label id="one">Address : <p id="one-p">24A Kingston St, Los Vegas <br> NC 28202, USA.</p></label>
-                                    <label id="two">Mail :<p id="two-p">support@pages.com</p></label>
-                                    <label id="three">Phone : <p id="three-p">(+22) 123 - 4567 - 900</p></label>
-                                </div>
-                            </div>`;
+  // Создаем логотип
+  const logoImg = document.createElement("img");
+  logoImg.src = "./images/footer/logo.svg";
+  logoImg.alt = "logo";
+  logoImg.id = "messengers-logo";
 
-  containers.forEach((container) =>
-    container === null
-      ? (container = `<div> </div>`)
-      : (container.innerHTML = footerHTML)
-  );
+  // Создаем список для ссылок на мессенджеры
+  const socialList = document.createElement("ul");
+  socialList.classList.add("ul-footer-messengers");
+
+  // Массив с данными о социальных сетях
+  const socialLinks = [
+    {
+      href: "https://www.facebook.com",
+      imgSrc: "./images/footer/4.svg",
+      alt: "facebook",
+    },
+    {
+      href: "https://twitter.com",
+      imgSrc: "./images/footer/Frame.svg",
+      alt: "twitter",
+    },
+    {
+      href: "https://www.instagram.com",
+      imgSrc: "./images/footer/Frame-2.svg",
+      alt: "in",
+    },
+    {
+      href: "https://www.instagram.com",
+      imgSrc: "./images/footer/1.svg",
+      alt: "instagram",
+    },
+  ];
+
+  // Создаем элементы списка для каждой ссылки
+  socialLinks.forEach((linkData) => {
+    const listItem = document.createElement("li");
+    const link = document.createElement("a");
+    link.href = linkData.href;
+    link.target = "_blank";
+    const img = document.createElement("img");
+    img.src = linkData.imgSrc;
+    img.alt = linkData.alt;
+    link.appendChild(img);
+    listItem.appendChild(link);
+    socialList.appendChild(listItem);
+  });
+
+  // Добавляем созданные элементы в раздел для мессенджеров
+  messengersDiv.appendChild(logoImg);
+  messengersDiv.appendChild(socialList);
+
+  // Создаем раздел "Explore"
+  const exploreDiv = document.createElement("div");
+  exploreDiv.classList.add("footer-explore");
+
+  // Заголовок "Explore"
+  const exploreHeading = document.createElement("h2");
+  exploreHeading.textContent = "Explore";
+
+  // Создаем список для раздела "Explore"
+  const exploreList = document.createElement("ul");
+
+  // Массив с данными для раздела "Explore"
+  const exploreLinks = [
+    { imgSrc: "./images/footer/IMAGE.svg", alt: "Home", text: "Home" },
+    { imgSrc: "./images/footer/IMAGE.svg", alt: "About", text: "About" },
+    { imgSrc: "./images/footer/IMAGE.svg", alt: "Articles", text: "Articles" },
+    {
+      imgSrc: "./images/footer/IMAGE.svg",
+      alt: "Our Store",
+      text: "Our Store",
+    },
+    {
+      imgSrc: "./images/footer/IMAGE.svg",
+      alt: "Contact Us",
+      text: "Contact Us",
+    },
+  ];
+
+  // Создаем элементы списка для каждой ссылки в разделе "Explore"
+  exploreLinks.forEach((linkData) => {
+    const listItem = document.createElement("li");
+    const img = document.createElement("img");
+    img.src = linkData.imgSrc;
+    img.alt = linkData.alt;
+    const text = document.createElement("p");
+    text.textContent = linkData.text;
+    listItem.appendChild(img);
+    listItem.appendChild(text);
+    exploreList.appendChild(listItem);
+  });
+
+  // Добавляем заголовок и список в раздел "Explore"
+  exploreDiv.appendChild(exploreHeading);
+  exploreDiv.appendChild(exploreList);
+
+  // Создаем раздел "Utility Pages"
+  const utilityDiv = document.createElement("div");
+  utilityDiv.classList.add("footer-utility-pages");
+
+  // Заголовок "Utility Pages"
+  const utilityHeading = document.createElement("h2");
+  utilityHeading.textContent = "Utility Pages";
+
+  // Создаем список для раздела "Utility Pages"
+  const utilityList = document.createElement("ul");
+
+  // Массив с данными для раздела "Utility Pages"
+  const utilityLinks = [
+    {
+      imgSrc: "./images/footer/IMAGE.svg",
+      alt: "Style Guide",
+      text: "Style Guide",
+    },
+    {
+      imgSrc: "./images/footer/IMAGE.svg",
+      alt: "404 Not Found",
+      text: "404 Not Found",
+    },
+    {
+      imgSrc: "./images/footer/IMAGE.svg",
+      alt: "Password Protected",
+      text: "Password Protected",
+    },
+    { imgSrc: "./images/footer/IMAGE.svg", alt: "Licenses", text: "Licenses" },
+    {
+      imgSrc: "./images/footer/IMAGE.svg",
+      alt: "Changelog",
+      text: "Changelog",
+    },
+  ];
+
+  // Создаем элементы списка для каждой ссылки в разделе "Utility Pages"
+  utilityLinks.forEach((linkData) => {
+    const listItem = document.createElement("li");
+    const img = document.createElement("img");
+    img.src = linkData.imgSrc;
+    img.alt = linkData.alt;
+    const text = document.createElement("p");
+    text.textContent = linkData.text;
+    listItem.appendChild(img);
+    listItem.appendChild(text);
+    utilityList.appendChild(listItem);
+  });
+
+  // Добавляем заголовок и список в раздел "Utility Pages"
+  utilityDiv.appendChild(utilityHeading);
+  utilityDiv.appendChild(utilityList);
+
+  // Создаем раздел "Keep in Touch"
+  const contactDiv = document.createElement("div");
+  contactDiv.classList.add("footer-keep-in-Touch");
+
+  // Заголовок "Keep in Touch"
+  const contactHeading = document.createElement("h2");
+  contactHeading.textContent = "Keep in Touch";
+
+  // Создаем контейнер для контактной информации
+  const contactInfoContainer = document.createElement("div");
+
+  // Создаем метки и текст для адреса, почты и телефона
+  const addressLabel = document.createElement("label");
+  addressLabel.id = "one";
+  addressLabel.textContent = "Address:";
+  const addressText = document.createElement("p");
+  addressText.id = "one-p";
+  addressText.innerHTML = "24A Kingston St, Los Vegas <br> NC 28202, USA.";
+
+  const mailLabel = document.createElement("label");
+  mailLabel.id = "two";
+  mailLabel.textContent = "Mail:";
+  const mailText = document.createElement("p");
+  mailText.id = "two-p";
+  mailText.textContent = "support@pages.com";
+
+  const phoneLabel = document.createElement("label");
+  phoneLabel.id = "three";
+  phoneLabel.textContent = "Phone:";
+  const phoneText = document.createElement("p");
+  phoneText.id = "three-p";
+  phoneText.textContent = "(+22) 123 - 4567 - 900";
+
+  // Добавляем метки и текст в контейнер контактной информации
+  contactInfoContainer.appendChild(addressLabel);
+  contactInfoContainer.appendChild(addressText);
+  contactInfoContainer.appendChild(mailLabel);
+  contactInfoContainer.appendChild(mailText);
+  contactInfoContainer.appendChild(phoneLabel);
+  contactInfoContainer.appendChild(phoneText);
+
+  // Добавляем заголовок и контейнер с контактной информацией в раздел "Keep in Touch"
+  contactDiv.appendChild(contactHeading);
+  contactDiv.appendChild(contactInfoContainer);
+
+  // Добавляем все созданные разделы в футер
+
+  messengersDiv.appendChild(exploreDiv);
+  messengersDiv.appendChild(utilityDiv);
+  messengersDiv.appendChild(contactDiv);
+
+  // Добавляем футер в контейнеры
+  containers.forEach((container) => {
+    if (container) {
+      container.appendChild(messengersDiv);
+    }
+  });
 }
-export { createHeader, createFooter, createAuthor };
+export { createFooter };
