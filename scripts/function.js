@@ -4,8 +4,28 @@ import {
   container_footer_companies,
   container_footer_author,
 } from "./variables.js";
+import { cards_main } from "./cards.js";
 
 const div = document.querySelector("#card-items");
+
+function createAuthor() {
+  cards_main.forEach((el) => {
+    const divCard = document.createElement("div");
+    divCard.classList.add("card");
+    divCard.innerHTML = `    <img src="${el.img}" alt="">
+                        <div class="cards-info">
+                                <h3>${el.title}</h3>
+                                <p id="price">${el.price}</p>
+                                <p id="text">${el.text}</p>
+                            <div id="link">
+                                    <div> </div>
+                                    <p>${el.link}</p>
+                            </div>
+                        </div>
+`;
+    div.append(divCard);
+  });
+}
 
 function createFooter() {
   const containers = [
@@ -61,14 +81,15 @@ function createFooter() {
     const img = document.createElement("img");
     img.src = linkData.imgSrc;
     img.alt = linkData.alt;
-    link.appendChild(img);
-    listItem.appendChild(link);
-    socialList.appendChild(listItem);
+    link.append(img);
+    listItem.append(link);
+    socialList.append(listItem);
   });
 
+  const div_social_list = document.createElement("div");
+  div_social_list.classList.add("logo_social");
   // Добавляем созданные элементы в раздел для мессенджеров
-  messengersDiv.appendChild(logoImg);
-  messengersDiv.appendChild(socialList);
+  div_social_list.append(logoImg, socialList);
 
   // Создаем раздел "Explore"
   const exploreDiv = document.createElement("div");
@@ -106,14 +127,13 @@ function createFooter() {
     img.alt = linkData.alt;
     const text = document.createElement("p");
     text.textContent = linkData.text;
-    listItem.appendChild(img);
-    listItem.appendChild(text);
-    exploreList.appendChild(listItem);
+    listItem.append(img, text);
+
+    exploreList.append(listItem);
   });
 
   // Добавляем заголовок и список в раздел "Explore"
-  exploreDiv.appendChild(exploreHeading);
-  exploreDiv.appendChild(exploreList);
+  exploreDiv.append(exploreHeading, exploreList);
 
   // Создаем раздел "Utility Pages"
   const utilityDiv = document.createElement("div");
@@ -159,14 +179,13 @@ function createFooter() {
     img.alt = linkData.alt;
     const text = document.createElement("p");
     text.textContent = linkData.text;
-    listItem.appendChild(img);
-    listItem.appendChild(text);
-    utilityList.appendChild(listItem);
+    listItem.append(img);
+    listItem.append(text);
+    utilityList.append(listItem);
   });
 
   // Добавляем заголовок и список в раздел "Utility Pages"
-  utilityDiv.appendChild(utilityHeading);
-  utilityDiv.appendChild(utilityList);
+  utilityDiv.append(utilityHeading, utilityList);
 
   // Создаем раздел "Keep in Touch"
   const contactDiv = document.createElement("div");
@@ -178,6 +197,7 @@ function createFooter() {
 
   // Создаем контейнер для контактной информации
   const contactInfoContainer = document.createElement("div");
+  contactInfoContainer.classList.add("date");
 
   // Создаем метки и текст для адреса, почты и телефона
   const addressLabel = document.createElement("label");
@@ -202,28 +222,26 @@ function createFooter() {
   phoneText.textContent = "(+22) 123 - 4567 - 900";
 
   // Добавляем метки и текст в контейнер контактной информации
-  contactInfoContainer.appendChild(addressLabel);
-  contactInfoContainer.appendChild(addressText);
-  contactInfoContainer.appendChild(mailLabel);
-  contactInfoContainer.appendChild(mailText);
-  contactInfoContainer.appendChild(phoneLabel);
-  contactInfoContainer.appendChild(phoneText);
+
+  addressLabel.append(addressText);
+  mailLabel.append(mailText);
+  phoneLabel.append(phoneText);
+
+  contactInfoContainer.append(addressLabel, mailLabel, phoneLabel);
 
   // Добавляем заголовок и контейнер с контактной информацией в раздел "Keep in Touch"
-  contactDiv.appendChild(contactHeading);
-  contactDiv.appendChild(contactInfoContainer);
+
+  contactDiv.append(contactHeading, contactInfoContainer);
 
   // Добавляем все созданные разделы в футер
 
-  messengersDiv.appendChild(exploreDiv);
-  messengersDiv.appendChild(utilityDiv);
-  messengersDiv.appendChild(contactDiv);
+  messengersDiv.append(div_social_list, exploreDiv, utilityDiv, contactDiv);
 
   // Добавляем футер в контейнеры
   containers.forEach((container) => {
     if (container) {
-      container.appendChild(messengersDiv);
+      container.append(messengersDiv);
     }
   });
 }
-export { createFooter };
+export { createFooter, createAuthor };

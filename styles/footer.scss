@@ -13,20 +13,27 @@
   gap: 30px;
 }
 .footer-messengers {
-  display: flex;
-  gap: 30px;
   margin: 0px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  .logo_social {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 277.703px;
+    margin-bottom: 125px;
+  }
 
   #messengers-logo {
-    position: absolute;
-    left: 4px;
+    margin-left: 0px;
     margin-bottom: 20px;
   }
 
   .ul-footer-messengers {
-    width: 277.703px;
-    margin: 0px 20px 124px 0px;
+    margin-left: 0px;
     list-style: $listStyleType;
     display: flex;
     flex-wrap: wrap;
@@ -44,7 +51,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 33.6px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
   }
 
   ul {
@@ -57,6 +64,7 @@
       font-style: normal;
       font-weight: 400;
       height: 25px;
+      margin-bottom: 10px;
 
       img {
         position: absolute;

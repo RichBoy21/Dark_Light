@@ -1,3 +1,4 @@
-import { createFooter } from "./function.js";
+import { createFooter, createAuthor } from "./function.js";
 
 createFooter();
+createAuthor();

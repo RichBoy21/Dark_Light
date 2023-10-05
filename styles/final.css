@@ -96,19 +96,25 @@
 }
 
 .footer-messengers {
-  display: flex;
-  gap: 30px;
   margin: 0px;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.footer-messengers .logo_social {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 277.703px;
+  margin-bottom: 125px;
 }
 .footer-messengers #messengers-logo {
-  position: absolute;
-  left: 4px;
+  margin-left: 0px;
   margin-bottom: 20px;
 }
 .footer-messengers .ul-footer-messengers {
-  width: 277.703px;
-  margin: 0px 20px 124px 0px;
+  margin-left: 0px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -126,7 +132,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 33.6px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 .footer-explore ul, .footer-utility-pages ul {
   list-style: none;
@@ -138,6 +144,7 @@
   font-style: normal;
   font-weight: 400;
   height: 25px;
+  margin-bottom: 10px;
 }
 .footer-explore ul li img, .footer-utility-pages ul li img {
   position: absolute;
@@ -239,6 +246,7 @@
 }
 .main-home .home-main-container {
   display: flex;
+  flex-wrap: wrap;
   max-width: 1300px;
   padding: 0px 21px 0px 23px;
   margin: 0px 70px 0px 70px;
@@ -359,7 +367,6 @@
 .author-book-main .author-main-container h1 {
   color: #1b3764;
   text-align: center;
-  margin-bottom: 20px;
   font-family: Cardo, serif;
   font-size: 42px;
   font-style: normal;
@@ -374,22 +381,23 @@
   height: 3px;
   border: none;
 }
-.author-book-main .author-main-container .card-items {
+.author-book-main .author-main-container #card-items {
   padding: 60px 10px 60px 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
-.author-book-main .author-main-container .card-items .card {
+.author-book-main .author-main-container #card-items .card {
   margin: 0px;
   display: flex;
   width: 630px;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 30px;
   flex-shrink: 0;
 }
-.author-book-main .author-main-container .card-items .card .cards-info h3 {
+.author-book-main .author-main-container #card-items .card .cards-info h3 {
   margin: 17px 0px 7px 0px;
   color: #1b3764;
   font-family: Cardo, serif;
@@ -399,7 +407,7 @@
   line-height: 38.4px;
   letter-spacing: 0.32px;
 }
-.author-book-main .author-main-container .card-items .card .cards-info #price {
+.author-book-main .author-main-container #card-items .card .cards-info #price {
   color: #ffca42;
   font-family: Inter;
   font-size: 21px;
@@ -408,7 +416,8 @@
   line-height: 33px;
   margin-bottom: 17px;
 }
-.author-book-main .author-main-container .card-items .card .cards-info #text {
+.author-book-main .author-main-container #card-items .card .cards-info #text {
+  width: 287px;
   color: #969aa0;
   font-family: Inter;
   font-size: 19px;
@@ -417,18 +426,18 @@
   line-height: 28.5px;
   margin-bottom: 13px;
 }
-.author-book-main .author-main-container .card-items .card .cards-info #link {
+.author-book-main .author-main-container #card-items .card .cards-info #link {
   display: flex;
   margin-bottom: 86px;
 }
-.author-book-main .author-main-container .card-items .card .cards-info #link div {
+.author-book-main .author-main-container #card-items .card .cards-info #link div {
   width: 16px;
   height: 16px;
   border-radius: 100px;
   background: #ffca42;
   margin: 5px 0px 0px 0px;
 }
-.author-book-main .author-main-container .card-items .card .cards-info #link p {
+.author-book-main .author-main-container #card-items .card .cards-info #link p {
   color: #1b3764;
   font-family: Cardo, serif;
   font-size: 24px;
@@ -441,6 +450,106 @@
 .author-about-main {
   background: #f5f8fc;
 }
+.author-about-main .content-main {
+  margin: 140px 70px;
+  display: flex;
+  gap: 150px;
+}
+.author-about-main .content-main img {
+  flex-shrink: 0;
+}
+.author-about-main .content-main .about-author {
+  max-width: 605px;
+  margin: 40px 0px 0px;
+}
+.author-about-main .content-main .about-author h2 {
+  margin: 15px 220px 20px 0px;
+  color: #1b3764;
+  text-align: center;
+  font-family: Cardo, serif;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50.4px;
+  text-transform: capitalize;
+}
+.author-about-main .content-main .about-author .line {
+  margin-bottom: 30px;
+  background-color: #ffca42;
+  width: 50px;
+  height: 3px;
+  border: none;
+  margin-left: 0px;
+}
+.author-about-main .content-main .about-author .author {
+  color: #969aa0;
+  font-family: Inter;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34.2px;
+  margin-bottom: 35px;
+}
+.author-about-main .content-main .about-author .content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 55px;
+}
+.author-about-main .content-main .about-author .content #border_content {
+  border: none;
+  padding: 0px;
+}
+.author-about-main .content-main .about-author .content .content-info {
+  margin: 0px 0px 55px 0px;
+  padding: 0px 48px 0px 12px;
+  color: #1b3764;
+  font-family: Cardo;
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 77px;
+  border-right: 1px solid #ffca42;
+}
+.author-about-main .content-main .about-author .content .content-info #content {
+  color: #969aa0;
+  font-family: Inter;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 21.6px;
+}
+.author-about-main .content-main .about-author .qr-code {
+  background: #1b3764;
+  display: flex;
+  flex-wrap: wrap;
+}
+.author-about-main .content-main .about-author .qr-code img {
+  margin: 15px 40px 15px 20px;
+}
+.author-about-main .content-main .about-author .qr-code div {
+  margin: 20px 20px 20px 0px;
+}
+.author-about-main .content-main .about-author .qr-code div h3 {
+  color: #ffca42;
+  font-family: Cardo;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26.4px;
+  margin: 18px 0px 10px 0px;
+}
+.author-about-main .content-main .about-author .qr-code div .qr-info {
+  color: #b4c7e7;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.5px;
+  letter-spacing: 0.19px;
+  display: flex;
+  gap: 10px;
+}
 
 *,
 html,
@@ -450,6 +559,7 @@ body {
   box-sizing: border-box;
   max-width: 1440px;
   margin: auto auto;
+  overflow: auto;
 }
 
 /*# sourceMappingURL=final.css.map */
