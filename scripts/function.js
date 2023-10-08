@@ -94,20 +94,30 @@ function createArticlesOne() {
   h1.innerText = "What Will You Learn?";
 
   const line = document.createElement("hr");
+  line.classList.add("line");
+
+  const div_title = document.createElement("div");
+  div_title.classList.add("title");
+  div_title.append(h1, line);
+
   const img_articles = document.createElement("img");
   img_articles.src = "./images/main/main_articles/Frame.svg";
 
   const div_container = document.createElement("div");
+  div_container.classList.add("cards_container");
 
   cards_articles.forEach((card) => {
     const div_card = document.createElement("div");
     div_card.classList.add("cards_articles");
     const p_number = document.createElement("p");
+    p_number.classList.add("p_number");
     const p_text = document.createElement("p");
+    p_text.classList.add("p_text");
 
     p_number.innerText = card.number;
     p_text.innerText = card.text;
-    div_container.append(p_number, p_text);
+    div_card.append(p_number, p_text);
+    div_container.append(div_card);
   });
 
   const articles_first_section = document.querySelector(
@@ -115,8 +125,10 @@ function createArticlesOne() {
   );
   if (articles_first_section) {
     const container = document.createElement("div");
-    container.append(h1, line, div_container);
-    articles_first_section.append(container, img_articles);
+    container.classList.add("container");
+    container.append(div_container, img_articles);
+
+    articles_first_section.append(div_title, container);
   }
 }
 
@@ -125,14 +137,18 @@ function createArticlesTwo() {
   h2.classList.add("articles_title");
   h2.innerText = "Articles & Resources";
   const line = document.createElement("hr");
+  line.classList.add("line");
 
   const div_container = document.createElement("div");
+  div_container.classList.add("container_two");
 
   cards_articles_two.forEach((card) => {
     const img_articles_two = document.createElement("img");
     const h3 = document.createElement("h3");
     const p_text = document.createElement("p");
+    p_text.classList.add("p_text");
     const p_date = document.createElement("p");
+    p_date.classList.add("p_date");
 
     img_articles_two.src = card.img;
     h3.innerText = card.title;

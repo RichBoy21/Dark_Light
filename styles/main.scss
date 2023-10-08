@@ -343,6 +343,7 @@
   }
   ul {
     display: flex;
+    flex-wrap: wrap;
     gap: 50px;
     margin: 0px 70px 125px;
     li {
@@ -362,6 +363,7 @@
 .main_second_section {
   background-color: $backgroundColor;
   display: flex;
+  flex-wrap: wrap;
   gap: 130px;
   div {
     margin: 0px 0px 0px 70px;
@@ -394,5 +396,131 @@
   }
   img {
     margin: 70px 70px 70px 0px;
+  }
+}
+.articles_first_section {
+  .title {
+    h1 {
+      color: #1b3764;
+      text-align: center;
+      font-family: $fontFamilyCardo;
+      font-size: 42px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 50.4px;
+      text-transform: capitalize;
+      margin: 215px 0px 23px;
+    }
+    .line {
+      background-color: #ffca42;
+      width: 50px;
+      height: 3px;
+      border: none;
+      margin: 0px auto 80px;
+    }
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 80px 70px 120px;
+  }
+  .cards_container {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 30px;
+    margin: 30px;
+
+    .cards_articles {
+      width: 303px;
+      height: 272px;
+      flex-shrink: 0;
+      background: #f4f8ff;
+      .p_number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        background: #ffca42;
+        width: 50px;
+        height: 50px;
+        flex-shrink: 0;
+        margin: 30px 223px 30px 30px;
+      }
+      .p_text {
+        color: #1b3764;
+        font-family: Cardo;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 33.6px;
+        width: 229px;
+        flex-shrink: 0;
+        margin: 0px 50px 30px 30px;
+      }
+    }
+  }
+}
+.articles_second_section {
+  background: #f4f8ff;
+  h2 {
+    color: #1b3764;
+    text-align: center;
+    font-family: $fontFamilyCardo;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50.4px;
+    text-transform: capitalize;
+    margin: 125px 0px 23px;
+  }
+  .line {
+    background-color: #ffca42;
+    width: 50px;
+    height: 3px;
+    border: none;
+    margin: 0px auto 60px;
+  }
+  .container_two {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0px 70px 110px;
+    .cards_articles_two {
+      width: 420px;
+      flex-shrink: 0;
+      h3 {
+        margin: 25px 70px 20px 30px;
+        color: #1b3764;
+        font-family: Cardo;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 33.6px;
+        letter-spacing: 0.24px;
+        width: 260px;
+        flex-shrink: 0;
+      }
+      .p_text {
+        color: #969aa0;
+        font-family: Inter;
+        font-size: 19px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30.4px;
+        width: 359px;
+        flex-shrink: 0;
+        margin-bottom: 15px;
+      }
+      .p_date {
+        color: #1b3764;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25.5px;
+        width: 128px;
+        margin-right: 0px;
+      }
+    }
   }
 }
