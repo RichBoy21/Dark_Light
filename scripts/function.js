@@ -4,27 +4,156 @@ import {
   container_footer_companies,
   container_footer_author,
 } from "./variables.js";
-import { cards_main } from "./cards.js";
 
-const div = document.querySelector("#card-items");
+import {
+  cards_main,
+  cards_companies,
+  cards_articles,
+  cards_articles_two,
+} from "./cards.js";
 
 function createAuthor() {
   cards_main.forEach((el) => {
     const divCard = document.createElement("div");
     divCard.classList.add("card");
-    divCard.innerHTML = `    <img src="${el.img}" alt="">
-                        <div class="cards-info">
-                                <h3>${el.title}</h3>
-                                <p id="price">${el.price}</p>
-                                <p id="text">${el.text}</p>
-                            <div id="link">
-                                    <div> </div>
-                                    <p>${el.link}</p>
-                            </div>
-                        </div>
-`;
-    div.append(divCard);
+    divCard.innerHTML = `
+      <img src="${el.img}" alt="">
+      <div class="cards-info">
+        <h3>${el.title}</h3>
+        <p class="price">${el.price}</p>
+        <p class="text">${el.text}</p>
+        <div class="link">
+          <div></div>
+          <p>${el.link}</p>
+        </div>
+      </div>
+    `;
+    const cardItems = document.getElementById("card-items");
+    if (cardItems) {
+      cardItems.appendChild(divCard);
+    }
   });
+}
+
+function createCompaniesOne() {
+  const h1 = document.createElement("h1");
+  h1.classList.add("section_title");
+  h1.innerText = "Trusted By The Best";
+
+  const line = document.createElement("hr");
+  line.classList.add("line");
+  const menu_list = document.createElement("ul");
+
+  cards_companies.forEach((card) => {
+    const list_item = document.createElement("li");
+    const img_item = document.createElement("img");
+    const h2_item = document.createElement("h2");
+    const p_item = document.createElement("p");
+
+    img_item.src = card.img;
+    h2_item.innerText = card.title;
+    p_item.innerText = card.text;
+
+    list_item.append(img_item, h2_item, p_item);
+    menu_list.append(list_item);
+  });
+
+  const cardItems = document.querySelector(".main_first_section");
+  if (cardItems) {
+    const container = document.createElement("div");
+    container.append(h1, line, menu_list);
+    cardItems.append(container);
+  }
+}
+function createCompaniesTwo() {
+  const div_item = document.createElement("div");
+  div_item.classList.add("container");
+
+  const h2_item_two = document.createElement("h2");
+  h2_item_two.innerText = "Get Book Copy Today!";
+  const line_two = document.createElement("hr");
+  line_two.classList.add("line");
+  const p_item_two = document.createElement("p");
+  p_item_two.innerText =
+    "We believe that bookstores are essential to a healthy culture. They’re where authors can connect with readers.";
+
+  const img_item_two = document.createElement("img");
+  img_item_two.src = "./images/main/main_companies/IMAGE.png";
+
+  const second_section = document.querySelector(".main_second_section");
+  if (second_section) {
+    const container = document.createElement("div");
+    container.append(h2_item_two, line_two, p_item_two);
+    second_section.append(container, img_item_two);
+  }
+}
+
+function createArticlesOne() {
+  const h1 = document.createElement("h1");
+  h1.classList.add("articles_title");
+  h1.innerText = "What Will You Learn?";
+
+  const line = document.createElement("hr");
+  const img_articles = document.createElement("img");
+  img_articles.src = "./images/main/main_articles/Frame.svg";
+
+  const div_container = document.createElement("div");
+
+  cards_articles.forEach((card) => {
+    const div_card = document.createElement("div");
+    div_card.classList.add("cards_articles");
+    const p_number = document.createElement("p");
+    const p_text = document.createElement("p");
+
+    p_number.innerText = card.number;
+    p_text.innerText = card.text;
+    div_container.append(p_number, p_text);
+  });
+
+  const articles_first_section = document.querySelector(
+    ".articles_first_section"
+  );
+  if (articles_first_section) {
+    const container = document.createElement("div");
+    container.append(h1, line, div_container);
+    articles_first_section.append(container, img_articles);
+  }
+}
+
+function createArticlesTwo() {
+  const h2 = document.createElement("h2");
+  h2.classList.add("articles_title");
+  h2.innerText = "Articles & Resources";
+  const line = document.createElement("hr");
+
+  const div_container = document.createElement("div");
+
+  cards_articles_two.forEach((card) => {
+    const img_articles_two = document.createElement("img");
+    const h3 = document.createElement("h3");
+    const p_text = document.createElement("p");
+    const p_date = document.createElement("p");
+
+    img_articles_two.src = card.img;
+    h3.innerText = card.title;
+    p_text.innerText = card.text;
+    p_date.innerText = card.date;
+
+    const div_card = document.createElement("div");
+    div_card.classList.add("cards_articles_two");
+    div_card.append(img_articles_two, h3, p_text, p_date);
+    div_container.appendChild(div_card);
+  });
+
+  const articles_second_section = document.querySelector(
+    ".articles_second_section"
+  );
+
+  if (articles_second_section) {
+    const container = document.createElement("div");
+    container.append(h2, line, div_container);
+    articles_second_section.appendChild(container);
+  }
 }
 
 function createFooter() {
@@ -244,4 +373,12 @@ function createFooter() {
     }
   });
 }
-export { createFooter, createAuthor };
+
+export {
+  createFooter,
+  createAuthor,
+  createCompaniesOne,
+  createCompaniesTwo,
+  createArticlesOne,
+  createArticlesTwo,
+};

@@ -192,6 +192,7 @@
 .footer-companies {
   background: #1b3764;
   padding: 60px 70px 75px;
+  margin-top: -5px;
 }
 
 .wrapper-footer-companies {
@@ -373,6 +374,7 @@
   font-weight: 400;
   line-height: 50.4px;
   text-transform: capitalize;
+  margin-bottom: 25px;
 }
 .author-book-main .author-main-container .line {
   margin-bottom: 15px;
@@ -549,6 +551,80 @@
   letter-spacing: 0.19px;
   display: flex;
   gap: 10px;
+}
+
+.main_first_section h1 {
+  color: #1b3764;
+  text-align: center;
+  font-family: Cardo, serif;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50.4px;
+  text-transform: capitalize;
+  margin: 180px 0px 23px 0px;
+}
+.main_first_section .line {
+  margin-bottom: 40px;
+  background-color: #ffca42;
+  width: 50px;
+  height: 3px;
+  border: none;
+}
+.main_first_section ul {
+  display: flex;
+  gap: 50px;
+  margin: 0px 70px 125px;
+}
+.main_first_section ul li {
+  text-align: center;
+}
+.main_first_section ul li img {
+  margin-bottom: 20px;
+}
+.main_first_section ul li h2 {
+  margin-bottom: 15px;
+}
+.main_first_section ul li p {
+  width: 200px;
+}
+
+.main_second_section {
+  background-color: #1b3764;
+  display: flex;
+  gap: 130px;
+}
+.main_second_section div {
+  margin: 0px 0px 0px 70px;
+}
+.main_second_section div h2 {
+  color: #fff;
+  font-family: Cardo, serif;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 54px;
+  text-transform: capitalize;
+  margin: 140px 0px 25px 0px;
+}
+.main_second_section div .line {
+  background-color: #ffca42;
+  width: 50px;
+  height: 3px;
+  border: none;
+  margin: 0px 0px 27px 0px;
+}
+.main_second_section div p {
+  color: #b4c7e7;
+  font-family: Inter;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.5px;
+  width: 539px;
+}
+.main_second_section img {
+  margin: 70px 70px 70px 0px;
 }
 
 *,
